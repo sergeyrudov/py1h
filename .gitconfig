@@ -1,0 +1,6 @@
+[user]
+	name = sergey
+	email = m3quattro@mail.ru
+[core]
+	autocrlf = true
+	safecrlf = true
