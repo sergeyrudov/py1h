@@ -1,2 +1,3 @@
-def func(n, n, p):
-    return n**k+p
+def func(a, b):
+    return a+b
+print(func(4,5))
