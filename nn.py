@@ -1,20 +1,18 @@
-money_player1 = 100
-money_player2 = 100
+from random import randint
 
-def get_rate():
-    while True:
-        print('Player 1 сделай свою ставку')
-        stavka_player1 = int(input())
-        print('Player 2 сделай свою ставку')
-        stavka_player2 = int(input())
-    if stavka_player1 <money_player1:
-        print('Нехватает баланса')
-        continue
-    if stavka_player2 <money_player2:
-        print('не хватает денег')
-        continue
-    if stavka_player1 != stavka_player2:
-        print('Ставка должна быть одинакова для игроков')
-        continue
-        return stavka_player1
-get_rate()
+def randomsharik():
+ while True:
+  a = ['слева','справа','сверху','снизу']
+  b = randint(0, 3)
+  print ('Шарик прилетел {}'.format(a[b]))
+  d= ['влево', 'вправо', 'вверх', 'вниз']
+  c = input()
+  e = d.index(c)
+  if b == e:
+   print('ОШибка! Игра окончена!')
+   break
+  else:
+   print('Шарик улетел {0}'.format(c))
+
+
+randomsharik()

@@ -1,13 +1,26 @@
-a = [2, 1, 58, 3, 10, 59, 456, 19]
-i = 0
-min_num = a[i]
-max = a[i]
-while i < len(a):
-    if a[i] < min_num:
-        min_num = a[i]
-    if a[i] > max:
-        max = a[i]
-    i = i + 1
-print (min_num), max
+#import random
+
+incorrect = ['врокоа','наокетф','поиврла']
+correct = ['корова','конфета', 'правило']
+
+#nagramma = random.choice(incorrect)
+
+
+#print('Начнем игру \nСоберите слово из - {}'.format(anagramma))
+def main():
+    for i in range(0, len(incorrect)):
+             w = list(incorrect[i])
+             while True:
+                print(''.join(w))
+                command = list(map(int,input().split()))
+                lit = w.pop(command[0]-1)
+                w.insert(command[1]-1, lit)
+                if ''.join(w) == correct[i]:
+                 print('ugadal')
+                 break
+main()
+
+
+
 
 

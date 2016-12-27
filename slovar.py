@@ -1,19 +1,31 @@
-translit = {'а':'a','б':'b','в':'v','г':'g','д':'d','е':'e','ё':'E',
-           'ж':'zh','з':'z','к':'k','л':'l','м':'m','н':'n','о':'o',
-            'п':'p','р':'r','с':'c','т':'t','у':'u','ф':'f','х':'h',
-            'ц':'c','ч':'ch','ш':'sh','щ':'sch','ь':'^','ы':'y','ъ':'^',
-            'э':'e','ю':'ju','я':'ya'}
-line = input()
-print(line)
+import random
 
-text =[]
+anagramma = ("корова","правило","конфета",)
+# случайным образом выбираем из последовательности одно слово
+word = random.choice(anagramma)
+# Создадим переменную, с которой будет сопоставлена версия игрока
+correct = word
 
-for i in line:
-    text.append(translit.get(i))
-    print(''.join(text))
-    if line.isupper():
-        text.append(translit.get(i)).isupper()
-        print(''.join(text))
+# создаем анаграмму выбранного слова, в которой буквы будут расставлены хаотично
+mixed = ""
+while word:
+    position = random.randrange(len(word))
+    mixed+= word[position]
+    word = word[:position] + word[(position + 1):]
+
+
+
+print("Начинаем игру")
+print("Вот анаграмма: {}".format(mixed))
+ugadal = input("Попробуйте отгадать исходное слово: ")
+while ugadal != "" and ugadal != correct:
+    if ugadal != correct:
+        print("К сожалению, вы неправы.")
+    if ugadal == correct:
+        print("Да, именно так! Вы отгадали!")
+
+# Если игрок слишком часто использовал подсказку (что странно, ведь она одна и та же), избегаем отрицательного значения
+# приводя к нулю
 
 
 
