@@ -2,8 +2,11 @@ from random import randint
 #dict.update([other]) - обновляет словарь, добавляя пары (ключ, значение) из other.
 #  Существующие ключи перезаписываются. Возвращает None (не новый словарь!).
 
-char = {'position':100,'inventory':['erhreh','erehhhrhrh','erherhrehhh44']}
-item = ['меч','топор','булава','цепь','книга','плащ','огнемет']
+#rooms = {100: {'title': 'Стартовая локация', 'descr': 'Это страртовая локация хеви ворлд, тратата',
+#               'exits': {'север': 101, 'восток': 102, 'юг': 103, 'запад': 104}
+
+#         }
+
 
 #def tratata():
 #    print (char.get('inventory'))
@@ -18,15 +21,53 @@ item = ['меч','топор','булава','цепь','книга','плащ',
 
 
 #def look_for_inventory(command):
-    if char.get('inventory') == []:
-        print ('инвентарь пустой')
-    else:
-        print('У вас в инвентаре - {0}'.format(char.get('inventory')))
+ #   if char.get('inventory') == []:
+ #       print ('инвентарь пустой')
+ #   else:
+ #       print('У вас в инвентаре - {0}'.format(char.get('inventory')))
 
-def look_for_inventory():
-    a = char['inventory']
-    c = 1
-    for i in a:
-        print("{0} | {1}  ".format(c, i))
-        c = c + 1
-look_for_inventory()
+#def look_for_inventory():
+  #  a = char['inventory']
+  #  c = 1
+  #  for i in a:
+  #      print("{0} | {1}  ".format(c, i))
+  #      c = c + 1
+#look_for_inventory()
+
+#c = 'кепка'
+#b = input()
+#if b == c:
+#    print('lol')
+
+
+class Person:
+    name =''
+    surname =''
+
+    def get_name(self):
+        return self.name
+
+    def set_name(self, name):
+        if len(name) <1:
+            return False
+        self.name = name.capitalize()
+        return  True
+
+a = Person()
+b = Person()
+
+a.name = 'Вася'
+b.name = 'Маша'
+
+print(a.get_name())
+print(b.get_name())
+
+
+поступает 10000
+
+def rergr(g):
+    if g
+        print('ok')
+
+rergr(10000)
+

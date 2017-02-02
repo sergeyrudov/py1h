@@ -67,3 +67,5 @@ def reg_step1():
     field.click()
     write_log(login)
 reg_step1()
+
+
